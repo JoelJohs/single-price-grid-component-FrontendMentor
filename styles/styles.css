@@ -1,0 +1,154 @@
+:root {
+  /** PRIMARY COLORS **/
+  --cyan: hsl(179, 62%, 43%);
+  --bright-yellow: hsl(71, 73%, 54%);
+  --cyan-second-block: hsl(179, 61%, 44%);
+  --cyan-third-block: hsl(179, 47%, 52%);
+
+  /** NEUTRAL COLORS **/
+  --light-gray: hsl(204, 43%, 93%);
+  --grayish-blue: hsl(218, 22%, 67%);
+}
+
+/** GENERAL CSS **/
+html {
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: "Karla", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: var(--light-gray);
+  width: 100%;
+  font-size: 16px;
+}
+
+.container {
+  max-width: 375px;
+  display: flex;
+  flex-direction: column;
+  margin: 50px auto;
+}
+/** HEADER **/
+.header {
+  background-color: white;
+  border-radius: 10px 10px 0 0;
+  padding: 10px 30px;
+}
+
+.header h2 {
+  font-weight: 700;
+  color: var(--cyan);
+}
+
+.header h3 {
+  font-weight: 700;
+  color: var(--bright-yellow);
+}
+
+.header p {
+  font-weight: 400;
+  color: var(--grayish-blue);
+  line-height: 2;
+}
+
+/** MIDDLE **/
+.middle {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--cyan-second-block);
+  padding: 10px 30px;
+}
+
+.middle h2 {
+  font-weight: 400;
+  color: white;
+}
+
+.price {
+  display: flex;
+  align-items: flex-end;
+}
+
+.price h1 {
+  font-weight: 700;
+  color: white;
+  margin-right: 10px;
+}
+
+.price p {
+  font-weight: 400;
+  color: var(--cyan-third-block);
+}
+
+.middle p {
+  margin-top: 0;
+  margin-bottom: 20px;
+  font-weight: 400;
+  color: var(--light-gray);
+  line-height: 2;
+}
+
+.button {
+  background-color: var(--bright-yellow);
+  border: none;
+  color: white;
+  font-weight: 700;
+  width: 100%;
+  padding: 15px 0;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+/** END **/
+.end {
+  background-color: var(--cyan-third-block);
+  border-radius: 0 0 10px 10px;
+  padding: 10px 30px;
+}
+.end h2 {
+  font-weight: 400;
+  color: white;
+}
+
+.end ul {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 20px;
+}
+.end li {
+  font-weight: 400;
+  color: var(--light-gray);
+  line-height: 1.5;
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 768px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .header {
+    grid-column: 1 / 3;
+    padding: 50px;
+  }
+  .middle {
+    border-radius: 0 0 0 10px;
+  }
+  .end {
+    border-radius: 0 0 10px 0;
+  }
+}
+/** ATTRIBUTIONS **/
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
